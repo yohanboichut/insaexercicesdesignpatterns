@@ -1,0 +1,19 @@
+= Wargame
+
+
+Nous sommes en charge du développement des moyens de transports dans un jeu de guerre.
+Chaque moyen de transport a des coordonnées (x,y). On peut rendre un moyen de transport _traçable_.
+Un moyen de transport traçable émet à chaque déplacement ses coordonnées d'origines et ses coordonnées d'arrivée.
+
+Les caractéristiques de déplacement des moyens de transports sont listées ci-dessous
+(chaque moyen de transport a une distance minimum de déplacement et une distance maximum) :
+
+. Un avion peut se déplacer au minimum d'une distance de 30 et au maximum de 650 ;
+. Un char peut se déplacer au minimum d'une distance de 5 et au maximum de 15 ;
+. Un vélo peut se déplacer au minimum d'une distance de 1 et au maximum 4.
+
+
+Nous avons un contrôleur radar qui nous permet de localiser et d'historiser tous les déplacements des véhicules tracés.
+
+
+Question : Modélisez et développez une solution en respectant les contraintes citées

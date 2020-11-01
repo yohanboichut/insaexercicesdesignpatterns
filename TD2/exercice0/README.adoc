@@ -1,0 +1,16 @@
+*_La pêche aux poissons_*
+
+
+Lors du TD précédent, nous avions refactoré une application simulant des poissons dans une mare.
+Néanmoins, on ne savait pas vraiment ce qu'il se passait réellement quand nous lancions des grenades dans la mare.
+Nous voulons mettre en place un "monitoring" qui nous permettra de savoir en temps réel, le nombre de poissons encore vivants,
+ainsi que ceux qui ont été tués lors de la dernière grenade
+
+
+*_Questions_*
+
+*a)* A l'aide du pattern *Observateur*, mettez en place ce "monitoring".
+On se contentera d'un objet modèle qui fera le décompte. Et on imagine que la façade
+nous permettra de récupérer cet outil afin d'afficher les différents évènements.
+
+

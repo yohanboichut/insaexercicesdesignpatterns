@@ -1,0 +1,29 @@
+_Logique_
+
+Dans cet exercice nous nous placerons dans le contexte de la logique
+trivaluée dans laquelle il existe trois valeurs : aux habituelles
+valeurs “vrai” et “faux” vient s’ajouter la valeur “inconnu” permettant
+d’exprimer l’absence d’information sur la valeur de vérité d’une donnée.
+
+Les opérateurs booléens classiques sont étendus pour prendre en compte
+la nouvelle valeur ajoutée : l’opérateur unaire « non » réalise la
+négation, la négation de la valeur inconnu vaut inconnu, l’opérateur
+binaire « et » qui réalise la conjonction (“et” logique) entre deux
+booléens trivalués, la table de vérité en est la suivante :
+
+Table de A et B
+
+[cols=",,,",options="header",]
+|==================================
+|*A \ B* |*Vrai* |*Faux* |*inconnu*
+|*Vrai* |Vrai |faux |Inconnu
+|*Faux* |Faux |faux |Faux
+|*inconnu* |Inconnu |faux |Inconnu
+|==================================
+
+a.  Donnez un diagramme de classe UML _détaillé_ permettant de
+représenter et d’évaluer des expressions avec cette logique trivaluée. Donnez le code Java permettant d'implémenter cette logique et l'opération de conjonction.
+b.  Expliquez brièvement quels sont les patrons de conceptions que vous
+avez utilisés et pourquoi vous les avez utilisés.
+c.  Donnez le code JAVA d’un programme principal (uniquement le main)
+qui créé l’expression : non ( vrai et non(inconnu)) puis l’évalue.
