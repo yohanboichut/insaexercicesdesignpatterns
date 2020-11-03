@@ -1,4 +1,6 @@
-package exercice0.mare;
+package exercice0.modele.mare;
+
+import exercice0.modele.poissons.Poisson;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,17 +8,17 @@ import java.util.Collection;
 public class Mare {
 
     /**
-     * Tous les poissons concernés par cette exercice0.mare
+     * Tous les poissons concernés par cette exercice0.modele.mare
      */
-    Collection<Poisson> poissons;
+    private Collection<Poisson> poissons;
 
     /**
-     * Longueur de la exercice0.mare. Cela implique des coordonnées en x variant de 0 à dimX pour les poissons
+     * Longueur de la exercice0.modele.mare. Cela implique des coordonnées en x variant de 0 à dimX pour les poissons
      */
     private int dimX;
 
     /**
-     * Largeur de la exercice0.mare. Cela implique des coordonnées en y variant de 0 à dimY pour les poissons
+     * Largeur de la exercice0.modele.mare. Cela implique des coordonnées en y variant de 0 à dimY pour les poissons
      */
 
     private int dimY;
@@ -36,7 +38,7 @@ public class Mare {
     }
 
     /**
-     * Permet d'ajouter un poisson dans la exercice0.mare
+     * Permet d'ajouter un poisson dans la exercice0.modele.mare
      * @param poisson
      * @throws PoissonOutOfBoundException : le poisson est en dehors de l'eau, il doit donc mourir
      */
@@ -60,7 +62,7 @@ public class Mare {
     }
 
     /**
-     * Permet de récupérer les poissons concernés par la exercice0.mare
+     * Permet de récupérer les poissons concernés par la exercice0.modele.mare
      * @return les poissons
      */
     public Collection<Poisson> getPoissons() {

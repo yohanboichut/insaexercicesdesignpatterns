@@ -1,20 +1,21 @@
 package exercice0.facade;
 
-import exercice0.mare.Mare;
-import exercice0.mare.Poisson;
+import exercice0.modele.grenades.Grenade;
+import exercice0.modele.mare.Mare;
+import exercice0.modele.poissons.Poisson;
 
 import java.util.Collection;
 
 public class FacadeMare {
 
     /**
-     * La exercice0.mare gérée par la façade
+     * La exercice0.modele.mare gérée par la façade
      */
     private Mare maMare;
 
 
     /**
-     * L'animation de la exercice0.mare est lancée dans un thread
+     * L'animation de la exercice0.modele.mare est lancée dans un thread
      */
     private Thread activiteMare;
 
@@ -22,8 +23,8 @@ public class FacadeMare {
     }
 
     /**
-     * On crée une exercice0.mare selon les dimensions données et avec un nombre de poissons donné.
-     * Les poissons sont placés aléatoirement dans la exercice0.mare
+     * On crée une exercice0.modele.mare selon les dimensions données et avec un nombre de poissons donné.
+     * Les poissons sont placés aléatoirement dans la exercice0.modele.mare
      * @param dimXMare
      * @param dimYMare
      * @param nbPoissons
@@ -34,7 +35,7 @@ public class FacadeMare {
             int posx=(int)(dimXMare*Math.random());
             int posy=(int)(dimYMare*Math.random());
             /**
-             * Cela peut sembler bizarre comme instruction, mais lors de sa création, le poisson s'inscrit dans la exercice0.mare.
+             * Cela peut sembler bizarre comme instruction, mais lors de sa création, le poisson s'inscrit dans la exercice0.modele.mare.
              */
             new Poisson(posx,posy,maMare);
         }
@@ -46,7 +47,7 @@ public class FacadeMare {
     }
 
     /**
-     * Permet de lancer l'animation de la exercice0.mare ou de la relancer
+     * Permet de lancer l'animation de la exercice0.modele.mare ou de la relancer
      */
 
     public void animerMare() {
@@ -62,13 +63,23 @@ public class FacadeMare {
     }
 
     /**
-     * Permet de stopper l'animation de la exercice0.mare
+     * Permet de stopper l'animation de la exercice0.modele.mare
      * @throws InterruptedException
      */
 
     public void gelerMare() throws InterruptedException {
         this.activiteMare.interrupt();
         this.activiteMare.join();
+
+
+    }
+
+
+    public void lancerGrenade(Grenade grenade) {
+
+        for (Poisson poisson: getMaMare()) {
+            grenade.impact(poisson);
+        }
 
 
     }

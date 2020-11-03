@@ -1,5 +1,8 @@
-package exercice0.mare;
+package exercice0.modele.poissons;
 
+
+import exercice0.modele.mare.Mare;
+import exercice0.modele.mare.PoissonOutOfBoundException;
 
 public class Poisson {
 
@@ -15,10 +18,11 @@ public class Poisson {
      * Position en y du poisson
      */
     private int y;
-    /**
-     * si estMort= true, Le poisson est mort. Cela arrive quand on place un poisson en dehors de la exercice0.mare
-     */
-    private boolean estMort;
+
+
+    private ComportementDeplacement comportementDeplacement;
+
+
 
     /**
      * Sens de déplacement du poisson
@@ -28,12 +32,13 @@ public class Poisson {
     public Poisson(int x, int y, Mare mare) {
         this.x = x;
         this.y = y;
-        this.estMort = false;
         this.sensDeplacement = 1;
         try {
             mare.ajouterPoisson(this);
+            this.comportementDeplacement = new DeplacementNormal(this);
+
         } catch (PoissonOutOfBoundException e) {
-            this.estMort = true;
+            this.comportementDeplacement = new DeplacementMort();
         }
         this.mare = mare;
     }
@@ -59,17 +64,28 @@ public class Poisson {
         this.y = y;
     }
 
+    public Mare getMare() {
+        return mare;
+    }
+
+    public void setSensDeplacement(int sensDeplacement) {
+        this.sensDeplacement = sensDeplacement;
+    }
+
+    public int getSensDeplacement() {
+        return sensDeplacement;
+    }
+
+    public void setComportementDeplacement(ComportementDeplacement comportementDeplacement) {
+        this.comportementDeplacement = comportementDeplacement;
+    }
+
     /**
      * Permet de faire un déplacement du poisson. Si le poisson arrive à une extrémité, il fait demi-tour.
      */
 
     public void deplacer() {
-        if (!this.estMort) {
-            if (this.x == 0 || this.x == this.mare.getDimX()) {
-                this.sensDeplacement *= -1;
-            }
-            this.x = this.x + this.sensDeplacement;
-        }
+        this.comportementDeplacement.deplacer();
     }
 
     @Override
