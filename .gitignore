@@ -1,0 +1,7 @@
+images/
+exemple/
+TD*/*.iml
+TD*/.idea
+TD*/target
+TD*/exercice*/target
+TD*/exercice*/*.iml
