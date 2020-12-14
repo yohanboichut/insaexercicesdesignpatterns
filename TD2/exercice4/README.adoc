@@ -1,18 +1,11 @@
-# File System
+# Expressions arithmétiques et visualisation
 
-Nous voulons modéliser un système de fichier de type UNIX comportant
-donc des répertoires, des fichiers et des liens. Nous voulons pouvoir
-afficher récursivement l’ensemble des éléments (comme la commande ls –R)
-ou encore supprimer récursivement les éléments (comme la commande rm
-–r).
+Nous voulons modéliser dans un premier temps des expressions arithmétiques traditionnelles sur les entiers.
 
 a.  Quel(s) patron(s) de conception est(sont) intéressant(s) pour représenter
-cette structure de données et pour la parcourir (affichage et
-suppression) ? Donnez le diagramme de classes correspondant et le code correspondant.
-b.  Ecrivez l’implémentation en Java d’un programme principal (main) qui
-créer une arborescence à 2 niveaux de répertoires (/rep1/rep2),
-contenant un fichier liste.txt dans rep1 et un lien nommé listebis.txt
-vers le fichier précédent dans rep2. Le main doit afficher le contenu de
-toute l’arborescence, et puis la supprimer.
-c.  Comment changer facilement le type "d'affichage" (e.g. en XML) de
-l'arborescence ? Proposez une solution.
+Les expressions. Introduisez une fonction permettant d'évaluer l'expression i.e. réduire l'expression à un entier.
+b.  Nous voulons afficher l'expression arithmétique sous différentes formes RPN (Reverse Polish Notation) et parenthèsées. Proposez une solution
+permettant d'afficher sous ses deux formes au moins et implémentez les. Il faut évidemment que cette solution soit extensible
+pour tout autre affichage supplémentaire.
+
+Pour info, la notation RPN de l'expression suivante (1+2)* (4-5) sera (* (+ 1 2) (- 4 5)).
