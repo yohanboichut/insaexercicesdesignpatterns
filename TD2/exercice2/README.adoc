@@ -1,29 +1,6 @@
-= Vive le vent...
+# Recette de cuisine
 
-On vous demande de réaliser une application permettant d’afficher les
-données provenant d’une station météo.
-
-On vous fournit au départ une classe DonneesMeteo, capable de récupérer
-les mesures des capteurs, et qui possède les quatre méthodes :
-getTemperature(), getHumidite(), getPression(), qui renvoient les
-valeurs (float) mesurées par les capteurs, ainsi qu’une méthode
-actualiserMesures(), qui est appelée à chaque fois que les mesures ont
-changé.
-
-.  sachant que chaque vue (affichageConditions, affichageStats,
-affichagePrevisions) possède une méthode actualiser(float temp, float
-humidite, float pression), écrire la méthode actualiserMesures() de la
-classe DonneesMeteo.
-
-.  Proposer, sous la forme d’un diagramme de classes UML, une nouvelle
-modélisation de ce problème, en utilisant le patron de conception
-« Observateur » (Observer). Ecrire en Java le code correspondant à la modélisation.
-
-. Ecrire le main de DonneeMeteo
-permettant de tester ce code. Note : pour les classes des 3 affichages,
-ne détaillez que le code de affichageConditions, qui affiche par exemple
-à l’écran : « Conditions actuelles : 25 degré et 70% d’humidité »
-
-.  On veut ajouter un nouvel affichage pour la station météo : l’indice
-Humidex, qui représente la température « ressentie », est calculé à
-partir de la température et de l’humidité. Ecrire le code Java permettant d'intégrer cette modification de spécification.
+L'année 2020 restera mémorable. En son honneur, nous lui dédions cet exercice.
+Le but est de modéliser des personnes. Ces personnes ne peuvent pas sortir sans masque. Donc par défaut,
+la fonctionnalité "sortir" n'existe pas. Cependant, comme par magie, avec un masque tout devient possible.
+Modélisez ce problème en utilisant le pattern décorateur.
