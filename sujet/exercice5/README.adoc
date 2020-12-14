@@ -1,0 +1,11 @@
+= Exercice 5
+
+
+Vous devez découvrir un pattern non vu en cours : la chaîne de responsabilité.
+
+
+. Etudiez le pattern dans un premier temps : https://blog.elao.com/fr/dev/design-pattern-chain-of-responsibility/
+. Appliquez le à l'exemple suivant. Un chatbot est un robot qui en fonction de la langue utilisée par un utilisateur
+va pouvoir répondre dans la même langue. Mettez en place un chatbot capable de répondre
+au message "Bonjour", par "Bonjour comment allez vous ?" et ce, en quatre langues différentes :
+français, anglais, allemand, italien.

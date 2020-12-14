@@ -1,0 +1,24 @@
+= Exercice 1
+
+Une bibliothèque nous a contacté pour améliorer la consultation des documents.
+En particulier, ils veulent mettre en place une structure facilement extensible permettant d'extraire
+les documents selon un certain ordre. Un document est composé d'un titre, d'une liste d'auteurs classés dans l'ordre alphabétique,
+d'une date de parution.
+
+Les deux algorithmes demandés pour le moment sont :
+
+    . un classement par ordre alphabétique sur les titres des oeuvres.
+    . un classement par ordre alphabétique sur le premier auteur.
+
+
+Il est évident qu'à l'avenir les algorithmes pourront être enrichis.
+
+
+Questions :
+
+. Implémentez proprement une solution correspondant déjà aux attentes
+. Nous voulons mettre en place un filtre permettant par exemple d'extraire les publications
+parues après 2016. Implémentez ce filtre et intégrez le à votre solution.
+
+
+
