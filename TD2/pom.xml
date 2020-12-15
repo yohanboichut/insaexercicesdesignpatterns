@@ -13,6 +13,7 @@
         <module>exercice2</module>
         <module>exercice3</module>
         <module>exercice4</module>
+        <module>exercice2bis</module>
     </modules>
     <packaging>pom</packaging>
 
