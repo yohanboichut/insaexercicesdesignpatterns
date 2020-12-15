@@ -3,8 +3,9 @@
 Nous voulons modéliser dans un premier temps des expressions arithmétiques traditionnelles sur les entiers.
 
 a.  Quel(s) patron(s) de conception est(sont) intéressant(s) pour représenter
-Les expressions. Introduisez une fonction permettant d'évaluer l'expression i.e. réduire l'expression à un entier.
-b.  Nous voulons afficher l'expression arithmétique sous différentes formes RPN (Reverse Polish Notation) et parenthèsées. Proposez une solution
+Les expressions.
+b. Ajoutez une fonctionnalité permettant de réduire une expression à un unique entier (utilisez un visiteur)
+C.  Nous voulons afficher l'expression arithmétique sous différentes formes RPN (Reverse Polish Notation) et parenthèsées. Proposez une solution
 permettant d'afficher sous ses deux formes au moins et implémentez les. Il faut évidemment que cette solution soit extensible
 pour tout autre affichage supplémentaire.
 
