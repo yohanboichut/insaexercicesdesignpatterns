@@ -1,0 +1,23 @@
+*_La machine à café_*
+
+On souhaite modéliser le comportement d'une machine à café fonctionnant
+avec des jetons : pour obtenir une boisson, il faut utiliser un jeton
+spécial préacheté.
+
+Au début, la machine est en attente d'un jeton. Lorsque l'on introduit
+un jeton, elle attend l'appui sur l’un des deux boutons de demande de
+café sucré ou de café non sucré. Si on appuie sur « Annulation », elle
+rend le jeton et attend un jeton de nouveau. Après le choix du café
+sucré ou non sucré, elle fait le café correspondant puis le sert et s'il
+reste des cafés (on ne se préoccupe pas du sucre restant dans la
+machine) revient en attente de jeton, sinon indique qu'il faut la
+recharger.
+
+a.  Quel(s) patron(s) de conception sont intéressant(s) pour représenter
+ce problème ? Justifiez et donnez le diagramme de classes correspondant et implémentez votre machine à café.
+b.  Ecrivez l’implémentation en Java d’un programme principal
+(uniquement le main) qui exécute le scénario suivant : deux personnes se
+présentent devant la machine, la première met un jeton et commande un
+café sucré, le récupère puis le suivant met un jeton et annule sa
+commande.
+
